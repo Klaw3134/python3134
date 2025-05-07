@@ -84,43 +84,43 @@ import time
 
 
 
-arancel=200000
-descuento=0
-print('''
-     1.- la floridam 20%
-     2.- la pintana 30%
-     3.- puente asalto 25%
-     4.- sanjoaco 15%  
-      ''')
+# arancel=200000
+# descuento=0
+# print('''
+#      1.- la floridam 20%
+#      2.- la pintana 30%
+#      3.- puente asalto 25%
+#      4.- sanjoaco 15%  
+#       ''')
 
-comuna=int(input("ingrese su comuna"))
+# comuna=int(input("ingrese su comuna"))
 
-if comuna==1:
-    descuento=20
-elif comuna==2:
-     descuento=30
-elif comuna==3:
-     descuento=25
-elif comuna==4:
-     descuento=15
-else:
-     print("Seleccion incorrecta")
+# if comuna==1:
+#     descuento=20
+# elif comuna==2:
+#      descuento=30
+# elif comuna==3:
+#      descuento=25
+# elif comuna==4:
+#      descuento=15
+# else:
+#      print("Seleccion incorrecta")
 
-grupo=int(input("ingrese grupo familiar ( num entero ud incluido)"))
+# grupo=int(input("ingrese grupo familiar ( num entero ud incluido)"))
 
-if grupo==1:
-    descuento+=2
-elif grupo<=4 and grupo>=2:
-     descuento+=3
-elif grupo>=5:
-     descuento+=4
+# if grupo==1:
+#     descuento+=2
+# elif grupo<=4 and grupo>=2:
+#      descuento+=3
+# elif grupo>=5:
+#      descuento+=4
 
-else:
-     print("Seleccion incorrecta")
+# else:
+#      print("Seleccion incorrecta")
 
-print("el descuento total es", descuento)
-desc=arancel*descuento/100
-total=arancel-desc
-print("el total a pagar es $", total)
+# print("el descuento total es", descuento)
+# desc=arancel*descuento/100
+# total=arancel-desc
+# print("el total a pagar es $", total)
      
 
