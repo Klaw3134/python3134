@@ -124,3 +124,34 @@ import time
 # print("el total a pagar es $", total)
      
 
+def realizar_votacion_simple(candidato1, candidato2):
+    """
+    Simulación simple de una votación con dos candidatos.
+    """
+    num_votantes = int(input("Ingrese la cantidad de votantes: "))
+    votos1 = 0
+    votos2 = 0
+
+    for i in range(num_votantes):
+        while True:
+            voto = input(f"Votante {i+1}, vote por ({candidato1}/{candidato2}): ").strip().lower()
+            if voto == candidato1.lower():
+                votos1 += 1
+                break
+            elif voto == candidato2.lower():
+                votos2 += 1
+                break
+            else:
+                print("Opción inválida.")
+
+    print("\n--- Resultados ---")
+    print(f"{candidato1}: {votos1} votos")
+    print(f"{candidato2}: {votos2} votos")
+    print("------------------\n")
+
+    if votos1 > votos2:
+        print(f"Ganador: {candidato1}")
+    elif votos2 > votos1:
+        print(f"Ganador: {candidato2}")
+    else:
+        print("Empate")

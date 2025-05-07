@@ -1,3 +1,0 @@
-numvotantes=int(input("ingrese cantidad de votantes:"))
-vot1=0
-vot2=0
