@@ -13,37 +13,72 @@
 
 
 # ingresos=int(input("escriba su ingreso mensual"))
-# educacion=input("ingrese su nivel educacional (basica-media-superior)")
+# educacion=int(input("ingrese su nivel educacional (1)basica 2)media 3)superior)"))
 # nacionalidad=input("ingrese su nacionalidad: Chilena o Extranjero")
+# credito=0
 
 # if ingresos>=500000 and ingresos<=1000000:
-#     credito=300000
-# elif ingresos>=1000000 and ingresos<=1500000:
-#     credito=650000
+#     credito+=300000
+# elif ingresos>=1000001 and ingresos<=1500000:
+#     credito+=650000
 # elif ingresos>=1500001:
-#     credito=1000000
+#     credito+=1000000
 # else:
-#     ingresos<500000
-#     print("sujeto no valido para credito")
+#     print(f"su credito actual es:{credito}")
 
-# if educacion.lower()=="basica":
-#     nivel=1
-# elif educacion.lower()=="media":
-#     nivel=1.3    
-# elif educacion.lower()=="superior":
-#     nivel=1.5
-# else:
-#     print("nivel educacional no valido")
+# if educacion==1:
+#     credito*=1
+# elif educacion==2:
+#     credito*=1.3    
+# elif educacion==3:
+#     credito*=1.5
+# print(f"su credito actual es:{credito}")
+    
 
 # if nacionalidad.lower()=="chilena":
-#     bono=300000
-# elif nacionalidad.lower()=="extranjero":
-#     bono=0
-# else:
-#     print("nacionalidad no valida")
+#     credito+=300000
 
-# ptecredi=(credito*nivel)+bono
-# print(f"credito final: ${ptecredi}")
+# else:
+#     print("no tiene bono por nacionalidad")
+
+# print(f"credito final: ${credito}")
+
+
+###lavar loza
+import time
+# platos_sucios=10
+
+# while platos_sucios!=0:
+#     platos_sucios-=1
+#     print("ud ha lavado un plato, quedan", platos_sucios)
+    
+#     time.sleep (1)
+
+
+# for i in range(platos_sucios,1,-1):
+#     print("ud ha lavado un plato, quedan", i)
+    
+#     time.sleep (1)   
+
+import random
+
+#### pida al usuario 2 digitos verificando que
+# el segundo sea mayo
+#genere un num aleatoreo entre esos dos digitos
+#e imprima la canntidad de veces el simbolo  
+
+digito1=int(input("ingrese un digito"))
+digito2=int(input("ingrese un segundo digito"))
+
+while digito1>digito2:
+    print("el segundo numero debe ser mayor que el primero")
+    digito2=int(input("ingrese el segundo digito"))
+numazar=random.randint(digito1,digito2)
+print("el numero es",numazar)    
+print("▄" *numazar)
+
+
+
 
 # ############Simula el movimiento de un jugador en un tablero
 # lineal de 30 casillas. El jugador lanza un dado virtual 
@@ -95,42 +130,42 @@
 # productos=
 
 
-total = 0
-contador = 1
+# total = 0
+# contador = 1
 
-while contador <= 3:
-    print("Producto", contador)
+# while contador <= 3:
+#     print("Producto", contador)
     
-    precio = int(input("Ingresa el precio del producto: "))
-    categoria = int(input("Ingresa la categoría (1, 2 o 3): "))
+#     precio = int(input("Ingresa el precio del producto: "))
+#     categoria = int(input("Ingresa la categoría (1, 2 o 3): "))
     
-    # Sumar impuesto según categoría
-    if categoria == 1:
-        impuesto = 200
-    elif categoria == 2:
-        impuesto = 400
-    elif categoria == 3:
-        impuesto = 600
-    else:
-        impuesto = 0  # Por si ingresan una categoría incorrecta
+#     # Sumar impuesto según categoría
+#     if categoria == 1:
+#         impuesto = 200
+#     elif categoria == 2:
+#         impuesto = 400
+#     elif categoria == 3:
+#         impuesto = 600
+#     else:
+#         impuesto = 0  # Por si ingresan una categoría incorrecta
 
-    precio_con_impuesto = precio + impuesto
-    total = total + precio_con_impuesto
+#     precio_con_impuesto = precio + impuesto
+#     total = total + precio_con_impuesto
 
-    contador = contador + 1
+#     contador = contador + 1
 
-# Aplicar descuento según total
-if total <= 1000:
-    descuento = total * 0.03
-elif total <= 5000:
-    descuento = total * 0.05
-else:
-    descuento = total * 0.06
+# # Aplicar descuento según total
+# if total <= 1000:
+#     descuento = total * 0.03
+# elif total <= 5000:
+#     descuento = total * 0.05
+# else:
+#     descuento = total * 0.06
 
-total_final = total - descuento
+# total_final = total - descuento
 
-# Mostrar resultados
-print("El total antes del descuento es:", total)
-print("Descuento aplicado:", descuento)
-print("El total a pagar es:", total_final)total = 0
-contador = 1
+# # Mostrar resultados
+# print("El total antes del descuento es:", total)
+# print("Descuento aplicado:", descuento)
+# print("El total a pagar es:", total_final)total = 0
+# contador = 1
