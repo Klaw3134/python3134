@@ -83,7 +83,6 @@ import time
  #total a pagar es de $154.000
 
 
-
 # arancel=200000
 # descuento=0
 # print('''
@@ -122,36 +121,28 @@ import time
 # desc=arancel*descuento/100
 # total=arancel-desc
 # print("el total a pagar es $", total)
-     
 
-def realizar_votacion_simple(candidato1, candidato2):
-    """
-    Simulación simple de una votación con dos candidatos.
-    """
-    num_votantes = int(input("Ingrese la cantidad de votantes: "))
-    votos1 = 0
-    votos2 = 0
+#  Gerenear un numero aleatoreo entre 1 y 50
+# Pedir al usuario un numero
+# Si ingresa un numero mayor  decirle, 
+# " El numero a adivinar es menor".
+# Si ingresa un numero menor  decirle,
+#  " El numero a adivinar es mayor".
+#EJ numeroAadivinar= 20 
+# Si ingresa el 15 debe decir, " El numero a adivinar es mayor" .
+# Si ingresa el 35 debe decir, " El numero a adivinar es menor" .
+ 
 
-    for i in range(num_votantes):
-        while True:
-            voto = input(f"Votante {i+1}, vote por ({candidato1}/{candidato2}): ").strip().lower()
-            if voto == candidato1.lower():
-                votos1 += 1
-                break
-            elif voto == candidato2.lower():
-                votos2 += 1
-                break
-            else:
-                print("Opción inválida.")
+import random
 
-    print("\n--- Resultados ---")
-    print(f"{candidato1}: {votos1} votos")
-    print(f"{candidato2}: {votos2} votos")
-    print("------------------\n")
-
-    if votos1 > votos2:
-        print(f"Ganador: {candidato1}")
-    elif votos2 > votos1:
-        print(f"Ganador: {candidato2}")
+numAdivinar=random.randint(1,50)
+num=int(input("adivine el numero"))
+while num!=numAdivinar:
+    # print(numAdivinar)
+    if num>numAdivinar:
+        print("elnumero a adivinar es menor")
     else:
-        print("Empate")
+        print("el numero a adivinar es mayor")
+    num=int(input("adivine el numero"))
+print("le achuntaste!")           
+
