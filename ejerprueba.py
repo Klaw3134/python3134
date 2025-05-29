@@ -137,24 +137,24 @@
 ### EVALUACION FORMATIVA 3
 ######
 
-while True:
-    try:
-        (''' Seleccione las opciones a llevar:
-        1.-PIKACHU ROLL $4500
-        2.-OTAKU ROLL $5000
-        3.-PULPO VENENOSO ROLL $5200
-        4.-ANGUILA ELECTRICA ROLL $4800
-        5.- Salir
-        ''')
-        op=int(input())
-        match op:
-            case 1:
-            case 2:
-            case 3:
-            case 4:        
+# while True:
+#     try:
+#         (''' Seleccione las opciones a llevar:
+#         1.-PIKACHU ROLL $4500
+#         2.-OTAKU ROLL $5000
+#         3.-PULPO VENENOSO ROLL $5200
+#         4.-ANGUILA ELECTRICA ROLL $4800
+#         5.- Salir
+#         ''')
+#         op=int(input())
+#         match op:
+#             case 1:
+#             case 2:
+#             case 3:
+#             case 4:        
 
     
-    except Exception:
+#     except Exception:
                          
                 
 
