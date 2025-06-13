@@ -62,14 +62,44 @@
 # 4.- Salir
 
 
-productos=[]
-precios=[]
+productos=["shampoo", "jabon", "galleta"]
+precios=[3500, 2000, 4000]
 carrito=[]
 
 while True:
-    print(''' 
-''')
-
+        try:
+           print('''Seleccione una opcion
+                1.- Agregar productos 
+                2.- comprar 
+                3.- crear boleta
+                4.- Salir
+                        ''')
+           op=int(input("Seleccione opcion"))
+           break
+        except Exception:
+                print("")    
+        match op:
+                case 1:
+                        prod=input("ingrese un producto")
+                        productos.append(prod)
+                        pre=int(input("ingrese el precio: "))
+                        precios.append(pre)
+                case 2:
+                        for i in range (len(productos)):
+                                print(i+1, productos[i], "$", precios[i] )
+                        producto=int(input("Seleccione una opcion"))
+                        carrito.append(producto-1)
+                        print(carrito)
+                case 3:
+                        for i in range(len(productos)):
+                                print(productos[i], precios[i])
+                case 4:
+                        print("")
+                case _:
+                        print("")    
+                        
+          
+ 
 
 
 
