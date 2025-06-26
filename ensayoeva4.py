@@ -86,6 +86,8 @@ def borrar_perros(dict):
     borrar=int(input("Seleccione el perro a borrar: "))
     del dict[borrar]
 
+
+    
 while True:
     try:
         print('''
