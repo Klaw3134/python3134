@@ -155,6 +155,37 @@
 
     
 #     except Exception:
-                         
-                
+
+
+
+# 
+
+# ## Domingo de pascua ####
+# Preguntar la Cantidad de niños que buscan huevitos de chocolates
+# Cuando se termine la busqueda , preguntar cantos huevos encontró cada uno
+# y clasificarlos de la siguiente forma
+# Menos de una docena : NOOB
+# Entre una docena a 24: Master
+# 25 huevos o mas :Legend
+# Mostrar resumen, y mostrar la mayor cantidad de huevitos encontrados por un solo niño
+
+noob=0
+master=0
+legend=0
+top=0
+
+import random
+
+while True:
+    try:
+        cantniñ=int(input("Cuantos niños van a buscar huevitos de chocolate??"))
+        while cantniñ<0:
+            print("Solo puedes ingresar numeros positivos")
+            cantniñ=int(input("Cuantos niños van a buscar huevitos de chocolate??"))
+            
+
+
+    except Exception:
+        print("")    
+
 

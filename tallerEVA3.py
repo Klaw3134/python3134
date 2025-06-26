@@ -1,98 +1,98 @@
-# ejemplo de carrito con categorias
-total=0
-cantart=0
-while True:
-    try:
-        op=int(input('''
-             Seleccione una opcion con un numero entero
-                     1.- Comprar verduras
-                     2.- Comprar frutas
-                     3.- Pagar
-                     4.- Salir
-                     '''))
+# # ejemplo de carrito con categorias-+
+# total=0
+# cantart=0
+# while True:
+#     try:
+#         op=int(input('''
+#              Seleccione una opcion con un numero entero
+#                      1.- Comprar verduras
+#                      2.- Comprar frutas
+#                      3.- Pagar
+#                      4.- Salir
+#                      '''))
         
-        match op:
-            case 1:
-                while True:
-                    try:
-                        op=int(input('''
-                                     Seleccione una opcion con un numero enterro
-                                     1.- Frutilla $1500
-                                     2.- Pera $1200
-                                     3.- Manzana $1300
-                                     4.- volver al menu principal
+#         match op:
+#             case 1:
+#                 while True:
+#                     try:
+#                         op=int(input('''
+#                                      Seleccione una opcion con un numero enterro
+#                                      1.- Frutilla $1500
+#                                      2.- Pera $1200
+#                                      3.- Manzana $1300
+#                                      4.- volver al menu principal
 
-                                    ''' ))
+#                                     ''' ))
                         
-                        match op:
-                            case 1:
-                                print("Has seleccionado frutilla")
-                                total+=1500
-                                cantart+=1
-                            case 2:
-                                print("Has seleccionado Pera")
-                                total+=1200
-                                cantart+=1
-                            case 3:
-                                print("has seleccionado Manzana")
-                                total+=1300
-                                cantart+=1
-                            case 4:
-                                print("Volviendo...")
-                                break
-                            case _:
-                                print("Opcion invalida")
-                    except Exception:
-                         print("Solo puede ingresar numeros enteros")
-                    print("Tu total hasta ahora es", total)    
-            case 2:
-                while True:
-                    try:
-                        op=int(input('''
-                                     seleccione una opcion con un numero entero
-                                     1.- papa $1500
-                                     2.- Lechuga $1200
-                                     3.- cebolla $1300
-                                     4.- volver almenu principal
+#                         match op:
+#                             case 1:
+#                                 print("Has seleccionado frutilla")
+#                                 total+=1500
+#                                 cantart+=1
+#                             case 2:
+#                                 print("Has seleccionado Pera")
+#                                 total+=1200
+#                                 cantart+=1
+#                             case 3:
+#                                 print("has seleccionado Manzana")
+#                                 total+=1300
+#                                 cantart+=1
+#                             case 4:
+#                                 print("Volviendo...")
+#                                 break
+#                             case _:
+#                                 print("Opcion invalida")
+#                     except Exception:
+#                          print("Solo puede ingresar numeros enteros")
+#                     print("Tu total hasta ahora es", total)    
+#             case 2:
+#                 while True:
+#                     try:
+#                         op=int(input('''
+#                                      seleccione una opcion con un numero entero
+#                                      1.- papa $1500
+#                                      2.- Lechuga $1200
+#                                      3.- cebolla $1300
+#                                      4.- volver almenu principal
 
-                                     '''))     
+#                                      '''))     
 
-                        match op:
+#                         match op:
 
-                            case 1:
-                                print("has seleccionado papa")
-                                cant=int(input("cuantas papas llevará?"))
-                                total+=cant*1500
-                                cantart+=cant
-                            case 2:
-                                print("Has seleccionado lechuga")
-                                total+=1200
-                                cantart+=1
-                            case 3:
-                                print("Has seleccionado Cebolla")
-                                total+=1300
-                                cantart+=1
-                            case 4:
-                                print("volviendo...")
-                                break
-                            case _:
-                                print("opcion invalida")
-                    except Exception:
-                        print("Solo se pueden ingresar numeros enteros")
-                    print(" tu total hasta ahora es de", total)
-            case 3:
-                print("Has seleccionado pagar")
-                print(f"El total de articulos es de {cantart}")
-                print(f"El total a pagar es {total}")
-                print(f"El totala pagar más IVA es {round(total*1.19)}")
-            case 4:
-                print("Saliendo...")
-                break
-            case _:
+#                             case 1:
+#                                 print("has seleccionado papa")
+#                                 cant=int(input("cuantas papas llevará?"))
+#                                 total+=cant*1500
+#                                 cantart+=cant
+#                             case 2:
+#                                 print("Has seleccionado lechuga")
+#                                 total+=1200
+#                                 cantart+=1
+#                             case 3:
+#                                 print("Has seleccionado Cebolla")
+#                                 total+=1300
+#                                 cantart+=1
+#                             case 4:
+#                                 print("volviendo...")
+#                                 break
+#                             case _:
+#                                 print("opcion invalida")
+#                     except Exception:
+#                         print("Solo se pueden ingresar numeros enteros")
+#                     print(" tu total hasta ahora es de", total)
+#             case 3:
+#                 print("Has seleccionado pagar")
+#                 print(f"El total de articulos es de {cantart}")
+#                 print(f"El total a pagar es {total}")
+#                 print(f"El totala pagar más IVA es {round(total*1.19)}")
+#             case 4:
+#                 print("Saliendo...")
+#                 break
+#             case _:
 
-                print("opcion invalida")
-    except Exception:
-        print("Solo puede ingresar numeros enteros")            
+#                 print("opcion invalida")
+#     except Exception:
+#         print("Solo puede ingresar numeros enteros")            
 # 
 ##             
 # ## Domingo de pascua ####
