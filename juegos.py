@@ -1,6 +1,6 @@
 def mostrar_juegos(dict):
-    for key,juego in dict.items():
-        print(key ,juego)
+    for j, dato in dict.items():
+        print(j, dato)
 def valida_code(clave):
     Mayuscula=0
     Minuscula=0
@@ -12,8 +12,8 @@ def valida_code(clave):
             Minuscula+=1
         if palabra.isdigit():
             Numero+=1
-    if Mayuscula==2 and Minuscula==2 and Numero==4:
-        print("El codigo está bien escrito")
+    if Mayuscula==2 and Minuscula==2 and Numero==4 :
+        print("la clave está bien escrita")
         return True
     else:
         print('''El codigo del juego debe tener 2 mayusculas, 2 minisculas
@@ -24,76 +24,79 @@ def valida_precio(p):
         return True
     else:
         return False
-def valida_nombre(N):
-    for l in N:
+def valida_nombre(nombre):
+    for l in nombre:
         if " " ==l:
             return True   
 def insertar_juego(dict):
     while True:
-        nombre=input("Ingrese un nombre: ")
+        nombre=input("Ingrese el nombre: ")
         if valida_nombre(nombre):
             break
         else:
-            print("el nombre del juego debe tener almenos 2 palabras")
-    while True:        
+            print("EL nombre del juego debe tener al menos 2 palabras")
+    while True:
         precio=int(input("Ingrese el precio: "))
         if valida_precio(precio):
             break
         else:
-            print("El precio debe estar entre $8000 y $100000")
-    while True:        
-        codigo=input("Ingrese su codigo: ")
+            print("EL precio debe estar entre $8.000 y $100.000")
+    while True:
+        codigo=input("Ingrese el codigo: ")
         if valida_code(codigo):
             pos=list(dict.keys())[-1]
-            dict[pos+1]={"nombre":nombre, "precio":precio, "code":codigo} 
+            dict[pos+1]={"nombre":nombre, "precio":precio,"code": codigo}
             break
         else:
             print("No se agregó el juego")
-def actualizar_juegos(dict):
+
+''' El nombre debe tener por lo menos 2 palabras'''
+'''El precio debe estar entre $8.000 y $100.000'''
+'''El codigo del juego debe tener 2 mayusculas, 2 minisculas
+y 4 numeros '''
+
+
+def act_perros(dict):
     mostrar_juegos(dict)
-    act=int(input("Seleccione el juego a actualizar: "))
+    act=int(input("Seleccione el juego a actulizar?: "))
     while True:
-        print('''  1.-nombre
-                   2.-precio
-                   3.-codigo
-                   4.-salir   
-                  ''')
-        dato=int(input("qué dato va a actualizar?:" ))
+        print('''1.- Nombre
+                2.- Precio
+                3.- Codigo
+                4.- Salir''')
+        dato=int(input("que dato va a actualizar?: "))
         match dato:
             case 1:
-                n=input("ingrese el nuevo nombre: ")
+                n=input("ingrese el nuevo nombre")
                 if valida_nombre(n):
                     dict[act]["nombre"]=n
                 else:
-                    print("elnombre del juego debe tener al menos dos palabras")
+                    print("EL nombre del juego debe tener al menos 2 palabras")
             case 2:
-                n=int(input("ingrese el nuevo precio"))
-                if valida_precio(n):
+                n=input("ingrese la nueva precio")
+                if valida_precio(n):    
                     dict[act]["precio"]=n
                 else:
-                    print("el precio debe estar entre $8000 y $100000")
+                    print("EL precio debe estar entre $8.000 y $100.000")
             case 3:
-                n=input("ingrese el  nuevo codigo")
+                n=input("ingrese el nuevo codigo")
                 if valida_code(n):
                     dict[act]["codigo"]=n
                 else:
-                     print("el paramatro del codigo no es correcto")
-                     print('''
+                    print("el paramatro del codigo no es correcto")
+                    print('''
                     el codigo debe tener, una mayuscula, una minuscula, 
-                    un numero y un largo exacto de 6''')        
+                    un numero y un largo exacto de 6''')
             case 4:
                 break
             case _:
-                print("Opción invalida")                                                
+                    print("Opcion invalida")
+
+
 def borrar_juegos(dict):
     mostrar_juegos(dict)
-    borrar=int(input("Que juego deseas borrar"))
+    borrar=int(input("Que juego desea borrar?"))
     del juegos[borrar]
-
-
-
-
-
 juegos={
     1:{"nombre":"Metroid Dread",
        "precio": 55000,
@@ -105,8 +108,17 @@ juegos={
        }
 }
 
+
+
+# mostrar_juegos(juegos)
+
+# insertar_juego(juegos)
+
+# mostrar_juegos(juegos)
+
+
 while True:
-     try:
+    try:
         print('''
               1.- Registrar un juego
               2.- Mostrar juegos
@@ -117,17 +129,16 @@ while True:
         op=int(input("Seleccione una opcion: "))
         match op:
             case 1:
-                insertar_juego(juegos)   
+                insertar_juego(juegos)
             case 2:
                 mostrar_juegos(juegos)
-            case 3:
-                actualizar_juegos(juegos)
-            case 4 :
+            case 4:
                 borrar_juegos(juegos)
             case 5:
                 break
             case _:
                     print("Opcion invalida")
-     except Exception as e:
-        print("EL error es: ", e)    
+    except Exception as e:
+        print("EL error es: ", e)
+
 
