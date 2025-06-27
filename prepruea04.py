@@ -1,3 +1,4 @@
+
 def mostrar_juegos(dict):
     for key,juego in dict.items():
         print(key ,juego)
@@ -86,9 +87,9 @@ def actualizar_juegos(dict):
             case _:
                 print("Opción invalida")                                                
 def borrar_juegos(dict):
-    mostrar_juegos(dict)
-    borrar=int(input("Que juego deseas borrar"))
-    del juegos[borrar]
+#     mostrar_juegos(dict)
+#     borrar=int(input("Que juego deseas borrar"))
+#     del juegos[borrar]
 
 
 
@@ -131,3 +132,129 @@ while True:
      except Exception as e:
         print("EL error es: ", e)    
 
+
+
+
+
+Parkins={
+    1:{"marca":"Toyota",
+       "año":1998,
+       "patente":"abc123",
+       "tipo":"auto"},
+    2:{"marca":"Hiundai",
+       "año":1995,
+       "patente":"abc456",
+       "tipo":"auto"}
+}
+def agregar(parkin):
+    while True:
+        try:
+                marcau=input("Ingrese nombre: ")
+                añou=int(input("Ingrese año: "))
+                validarA(añou)
+                patenteu=input("Ingrese patente: ")
+                validarP(patenteu)
+                tipou=input("Ingrese tipo: ")
+                llave=list(parkin.keys())[-1]
+                parkin[llave+1]={"marca":marcau,"año":añou,"patente":patenteu,"tipo":tipou}
+                break   
+        except Exception as e:
+            print(e)
+
+def validarP(variable):
+    while True:
+        try:
+            minu=0
+            numeros=0
+            for letra in variable:
+                if letra.islower():
+                    minu+=1
+                if letra.isdigit():
+                    numeros+=1
+            if minu==4 and numeros==2:
+                print("La patente esta bien escrita")
+                return True
+            else:
+                print("La patente esta mal escrita, debe tener 4 letras y 2 digitos")
+                variable=input("Ingrese patente: ")
+        except Exception as e:
+            print(e)
+        
+            
+def validarA(año):
+   cont=0
+   for digito in str(año):
+     cont+=1
+   if cont==4:
+     return True
+   elif cont>4 or cont<4:
+     print("Debe tener 4 digitos")
+     año=int(input("Ingrese año: "))
+        
+        
+    
+        
+def mostrar(parkins):
+     for llave,valor in parkins.items():
+         print("ID ",llave,valor)
+
+def actualizar(parkins):
+    mostrar(parkins)
+    while True:
+        iden=int(input("Ingrese ID que desea actualizar: "))
+        if iden in parkins:
+            añov=False
+            patentev=False
+            while True:
+                try:
+                        marcau=input("Ingrese nombre: ")
+                        añou=int(input("Ingrese año: "))
+                        añov=validarA(añou)
+                        patenteu=input("Ingrese patente: ")
+                        patentev=validarP(patenteu)
+                        tipou=input("Ingrese tipo: ")
+                        parkins[iden]={"marca":marcau,"año":añou,"patente":patenteu}
+                        break   
+                except Exception as e:
+                    print(e)
+        else:
+            print("Ingrese un id valido")
+        break
+ 
+def estadistica(parkin):
+    total=0
+    for llave in parkin:
+         total+=1
+    print(f"Autos guardados: {total}")
+    iden=list(parkin.keys())[-1]
+    ultimo=parkin[iden]
+    print(f"El ultimo ingreso fue: {ultimo}")
+    
+         
+         
+                        
+while True:
+    try:
+        op=int(input(""""
+                      1.- Ingresar Vehiculo
+                      2.- Mostrar Vehiculos
+                      3.- Actualizar Vehiculo
+                      4.- Marcar salida de Vehiculo con hora*
+                      5.- Mostar estadisticas: ultimo vehiculo ingresado, y total en garage
+                      6.- Salir"""))
+        match op:
+            case 1:
+                agregar(Parkins)
+            case 2:
+                mostrar(Parkins)
+            case 3:
+                actualizar(Parkins)
+            case 4:
+                print()
+            case 5:
+                estadistica(Parkins)
+            case 6:
+                exit()
+                
+    except Exception as e:
+        print(e)
